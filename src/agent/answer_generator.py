@@ -1,15 +1,44 @@
-from typing import List
 from .schemas import QueryClassification, SelectedEvidence, ThresholdInterpretation
-
 import re
+
 
 def has_number(text: str) -> bool:
     return bool(re.search(r"\d+(\.\d+)?", text))
+
+def has_blood_pressure_pair_pattern(text: str) -> bool:
+    slash_pattern = re.search(r"(?<!\d)\d{2,3}\s*/\s*\d{2,3}(?!\d)", text)
+    e_pattern = re.search(r"(?<!\d)\d{2,3}\s*에\s*\d{2,3}(?!\d)", text)
+    named_pattern = (
+        re.search(r"수축기\s*\d{2,3}", text) and re.search(r"이완기\s*\d{2,3}", text)
+    ) or (
+        re.search(r"최고혈압\s*\d{2,3}", text) and re.search(r"최저혈압\s*\d{2,3}", text)
+    )
+    return bool(slash_pattern or e_pattern or named_pattern)
+
+
+def is_fasting_glucose_related(query: str) -> bool:
+    return ("공복혈당" in query) or ("혈당" in query)
+
+
+def is_blood_pressure_related(query: str) -> bool:
+    bp_terms = ["혈압", "수축기", "이완기", "최고혈압", "최저혈압"]
+    return any(term in query for term in bp_terms) or has_blood_pressure_pair_pattern(query)
+
 
 def looks_like_interpret_request_without_number(query: str) -> bool:
     q = query.strip()
     interpret_terms = ["해석", "판정", "괜찮아", "어떤 상태", "정상", "경계", "위험", "수치"]
     return (not has_number(q)) and any(term in q for term in interpret_terms)
+
+
+def build_missing_value_message(query: str) -> str:
+    if is_blood_pressure_related(query):
+        return "혈압 해석을 하려면 수축기와 이완기 값이 함께 필요해. 예를 들면 120/80처럼 알려주면 기준에 맞춰 다시 볼 수 있어."
+
+    if is_fasting_glucose_related(query):
+        return "수치 해석을 하려면 실제 검사 수치가 필요해. 공복혈당 값을 같이 알려주면 기준에 맞춰 다시 볼 수 있어."
+
+    return "지금 정보만으로는 정확히 해석하기 어려워. 수치나 검사 항목을 같이 알려주면 기준에 맞춰 다시 볼 수 있어."
 
 
 def generate_answer(query, classification, evidence, interpretation) -> str:
@@ -18,7 +47,7 @@ def generate_answer(query, classification, evidence, interpretation) -> str:
 
     if classification.query_type == "general_info":
         if looks_like_interpret_request_without_number(query):
-            return "수치 해석을 하려면 실제 검사 수치가 필요해. 공복혈당 값을 같이 알려주면 기준에 맞춰 다시 볼 수 있어."
+            return build_missing_value_message(query)
 
         if evidence and evidence[0].score > 0.4 and "관련 정보를 찾지 못했다" not in evidence[0].text:
             return evidence[0].text
@@ -34,7 +63,7 @@ def generate_answer(query, classification, evidence, interpretation) -> str:
         return "지금 정보만으로는 바로 행동을 단정하기 어렵고, 증상이나 검사 결과를 조금 더 구체적으로 봐야 해."
 
     if interpretation.status == "insufficient":
-        return "지금 정보만으로는 정확히 해석하기 어려워. 수치나 검사 항목을 같이 알려주면 기준에 맞춰 다시 볼 수 있어."
+        return build_missing_value_message(query)
 
     if interpretation.status == "normal":
         return "해당 수치는 현재 기준상 정상 범위로 볼 수 있어. 다만 한 번의 결과만으로 단정하기보다는 전체 검사 맥락과 함께 보는 게 좋아."
