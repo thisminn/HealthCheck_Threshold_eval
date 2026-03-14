@@ -1,5 +1,3 @@
-cat > README.md <<'EOF'
-
 # HealthCheck_Threshold_eval
 
 LLM 기반 건강검진 threshold 해석 평가 프로젝트.
@@ -7,15 +5,19 @@ LLM 기반 건강검진 threshold 해석 평가 프로젝트.
 ## Current milestone
 
 - v3 RAG freeze
-- simple RAG-Agent v0 for fasting glucose
-- mini evalset completed
+- simple RAG-Agent v0 완료
 
-## Scope
+## Supported domains
 
-- query classify
-- retrieve
-- select evidence
-- interpret threshold
-- generate answer with action guidance
-- safety override
-  EOF
+- fasting glucose
+- blood pressure
+
+## Evaluation results
+
+- FPG mini evalset: 15/15
+- BP mini evalset: 15/15
+
+## Out of scope
+
+- comparison 정교 해석 미지원
+- 기타 항목(중성지방, 총콜레스테롤) 미포함

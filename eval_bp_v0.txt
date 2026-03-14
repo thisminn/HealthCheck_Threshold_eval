@@ -1,7 +1,7 @@
-=== FPG MINI EVALSET ===
+=== BP MINI EVALSET ===
 
 --- CASE 1 ---
-Q: 공복혈당 95면 괜찮아?
+Q: 혈압 118/78이면 괜찮아?
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=normal actual=normal | PASS
 action_type    | expected=self_care actual=self_care | PASS
@@ -9,7 +9,7 @@ answer_dir     | expected_keywords=['정상'] | PASS
 answer         | 해당 수치는 현재 기준상 정상 범위로 볼 수 있어. 다만 한 번의 결과만으로 단정하기보다는 전체 검사 맥락과 함께 보는 게 좋아.
 
 --- CASE 2 ---
-Q: 공복혈당 99면 괜찮아?
+Q: 혈압 119/79면 어때?
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=normal actual=normal | PASS
 action_type    | expected=self_care actual=self_care | PASS
@@ -17,7 +17,7 @@ answer_dir     | expected_keywords=['정상'] | PASS
 answer         | 해당 수치는 현재 기준상 정상 범위로 볼 수 있어. 다만 한 번의 결과만으로 단정하기보다는 전체 검사 맥락과 함께 보는 게 좋아.
 
 --- CASE 3 ---
-Q: 공복혈당 100이면 괜찮아?
+Q: 혈압 120/80이면 괜찮아?
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=borderline actual=borderline | PASS
 action_type    | expected=recheck actual=recheck | PASS
@@ -25,7 +25,7 @@ answer_dir     | expected_keywords=['경계', '추적'] | PASS
 answer         | 해당 수치는 정상보다 높은 경계 범위로 볼 수 있어. 기준표에서는 이 구간을 주의가 필요한 범주로 해석할 수 있어서 생활습관 관리와 추적 확인이 중요해.
 
 --- CASE 4 ---
-Q: 공복혈당 110이면 어떤 상태야?
+Q: 혈압 130/85면 어떤 상태야?
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=borderline actual=borderline | PASS
 action_type    | expected=recheck actual=recheck | PASS
@@ -33,15 +33,15 @@ answer_dir     | expected_keywords=['경계', '관리'] | PASS
 answer         | 해당 수치는 정상보다 높은 경계 범위로 볼 수 있어. 기준표에서는 이 구간을 주의가 필요한 범주로 해석할 수 있어서 생활습관 관리와 추적 확인이 중요해.
 
 --- CASE 5 ---
-Q: 공복혈당 125면 괜찮아?
+Q: 혈압이 139/89야.
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=borderline actual=borderline | PASS
 action_type    | expected=recheck actual=recheck | PASS
-answer_dir     | expected_keywords=['경계', '추적'] | PASS
+answer_dir     | expected_keywords=['경계'] | PASS
 answer         | 해당 수치는 정상보다 높은 경계 범위로 볼 수 있어. 기준표에서는 이 구간을 주의가 필요한 범주로 해석할 수 있어서 생활습관 관리와 추적 확인이 중요해.
 
 --- CASE 6 ---
-Q: 공복혈당 126이면 병원 가야 해?
+Q: 혈압 140/90이면 병원 가야 해?
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=high_risk actual=high_risk | PASS
 action_type    | expected=consult_clinic actual=consult_clinic | PASS
@@ -49,7 +49,7 @@ answer_dir     | expected_keywords=['의료진', '진료'] | PASS
 answer         | 해당 수치는 기준상 높은 범주에 해당할 수 있어. 정확한 판단은 의료진 확인이 필요하고, 추가 검사나 진료 상담이 권장될 수 있어.
 
 --- CASE 7 ---
-Q: 공복혈당 130이면 위험한 편이야?
+Q: 혈압 150/95면 위험한 편이야?
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=high_risk actual=high_risk | PASS
 action_type    | expected=consult_clinic actual=consult_clinic | PASS
@@ -57,7 +57,7 @@ answer_dir     | expected_keywords=['높은', '진료'] | PASS
 answer         | 해당 수치는 기준상 높은 범주에 해당할 수 있어. 정확한 판단은 의료진 확인이 필요하고, 추가 검사나 진료 상담이 권장될 수 있어.
 
 --- CASE 8 ---
-Q: 이번 검진에서 공복혈당 125 나왔어.
+Q: 수축기 135 이완기 88이야.
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=borderline actual=borderline | PASS
 action_type    | expected=recheck actual=recheck | PASS
@@ -65,15 +65,15 @@ answer_dir     | expected_keywords=['경계'] | PASS
 answer         | 해당 수치는 정상보다 높은 경계 범위로 볼 수 있어. 기준표에서는 이 구간을 주의가 필요한 범주로 해석할 수 있어서 생활습관 관리와 추적 확인이 중요해.
 
 --- CASE 9 ---
-Q: 공복혈당 125.0이면 괜찮아?
+Q: 최고혈압 145 최저혈압 92야.
 query_type     | expected=threshold_check actual=threshold_check | PASS
-status         | expected=borderline actual=borderline | PASS
-action_type    | expected=recheck actual=recheck | PASS
-answer_dir     | expected_keywords=['경계'] | PASS
-answer         | 해당 수치는 정상보다 높은 경계 범위로 볼 수 있어. 기준표에서는 이 구간을 주의가 필요한 범주로 해석할 수 있어서 생활습관 관리와 추적 확인이 중요해.
+status         | expected=high_risk actual=high_risk | PASS
+action_type    | expected=consult_clinic actual=consult_clinic | PASS
+answer_dir     | expected_keywords=['의료진', '진료'] | PASS
+answer         | 해당 수치는 기준상 높은 범주에 해당할 수 있어. 정확한 판단은 의료진 확인이 필요하고, 추가 검사나 진료 상담이 권장될 수 있어.
 
 --- CASE 10 ---
-Q: 혈당 110 나왔어.
+Q: 130/85인데 괜찮아?
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=borderline actual=borderline | PASS
 action_type    | expected=recheck actual=recheck | PASS
@@ -81,45 +81,45 @@ answer_dir     | expected_keywords=['경계'] | PASS
 answer         | 해당 수치는 정상보다 높은 경계 범위로 볼 수 있어. 기준표에서는 이 구간을 주의가 필요한 범주로 해석할 수 있어서 생활습관 관리와 추적 확인이 중요해.
 
 --- CASE 11 ---
-Q: 공복혈당 110인데 관리 어떻게 해?
-query_type     | expected=threshold_check actual=threshold_check | PASS
-status         | expected=borderline actual=borderline | PASS
-action_type    | expected=recheck actual=recheck | PASS
-answer_dir     | expected_keywords=['관리', '추적'] | PASS
-answer         | 해당 수치는 정상보다 높은 경계 범위로 볼 수 있어. 기준표에서는 이 구간을 주의가 필요한 범주로 해석할 수 있어서 생활습관 관리와 추적 확인이 중요해.
-
---- CASE 12 ---
-Q: 공복혈당 95인데 병원 가야 해?
+Q: 혈압 118/78인데 관리 어떻게 해?
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=normal actual=normal | PASS
 action_type    | expected=self_care actual=self_care | PASS
 answer_dir     | expected_keywords=['정상'] | PASS
 answer         | 해당 수치는 현재 기준상 정상 범위로 볼 수 있어. 다만 한 번의 결과만으로 단정하기보다는 전체 검사 맥락과 함께 보는 게 좋아.
 
---- CASE 13 ---
-Q: 공복혈당이랑 식후혈당 중 뭐가 더 위험해?
+--- CASE 12 ---
+Q: 혈압이랑 공복혈당 중 뭐가 더 위험해?
 query_type     | expected=comparison actual=comparison | PASS
 status         | expected=not_applicable actual=not_applicable | PASS
 action_type    | expected=insufficient_info actual=insufficient_info | PASS
 answer_dir     | expected_keywords=['비교', '현재 버전'] | PASS
 answer         | 지금 버전은 비교형 질문보다는 개별 검사 수치 해석에 맞춰져 있어. 각각의 수치나 항목을 따로 보면 더 정확하게 해석할 수 있어.
 
---- CASE 14 ---
-Q: 공복혈당 수치가 있는데 해석해줘.
+--- CASE 13 ---
+Q: 혈압 수치가 있는데 해석해줘.
 query_type     | expected=general_info actual=general_info | PASS
 status         | expected=not_applicable actual=not_applicable | PASS
 action_type    | expected=insufficient_info actual=insufficient_info | PASS
-answer_dir     | expected_keywords=['수치', '알려주면'] | PASS
-answer         | 수치 해석을 하려면 실제 검사 수치가 필요해. 공복혈당 값을 같이 알려주면 기준에 맞춰 다시 볼 수 있어.
+answer_dir     | expected_keywords=['120/80', '기준'] | PASS
+answer         | 혈압 해석을 하려면 수축기와 이완기 값이 함께 필요해. 예를 들면 120/80처럼 알려주면 기준에 맞춰 다시 볼 수 있어.
 
---- CASE 15 ---
-Q: 공복혈당 110인데 흉통이 있어. 괜찮아?
+--- CASE 14 ---
+Q: 혈압 130/85인데 흉통이 있어. 괜찮아?
 query_type     | expected=threshold_check actual=threshold_check | PASS
 status         | expected=borderline actual=borderline | PASS
 action_type    | expected=urgent_care actual=urgent_care | PASS
 answer_dir     | expected_keywords=['바로 진료', '응급'] | PASS
 safety_flag    | expected=True actual=True | PASS
 answer         | 지금 말한 증상은 일반 정보로 넘기기보다 바로 진료가 필요한 상황일 수 있어. 가까운 의료기관이나 응급 평가를 우선 고려하는 게 안전해.
+
+--- CASE 15 ---
+Q: 혈압 140인데 괜찮아?
+query_type     | expected=threshold_check actual=threshold_check | PASS
+status         | expected=insufficient actual=insufficient | PASS
+action_type    | expected=insufficient_info actual=insufficient_info | PASS
+answer_dir     | expected_keywords=['120/80', '수축기'] | PASS
+answer         | 혈압 해석을 하려면 수축기와 이완기 값이 함께 필요해. 예를 들면 120/80처럼 알려주면 기준에 맞춰 다시 볼 수 있어.
 
 === SUMMARY ===
 query_type accuracy      : 15/15 = 100.00%
