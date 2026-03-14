@@ -1,0 +1,1394 @@
+[
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q016",
+    "question_text": "공복혈당 99면 정상인가?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6542888879776001,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.5112603902816772,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.48827695846557617,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.472037672996521,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4710593819618225,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6542888879776001,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.5112603902816772,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.48827695846557617,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": null,
+    "predicted_glu_class": "정상A",
+    "predicted_action": "A0: 일반 건강관리",
+    "answer": "제공된 기준에 따르면 공복 혈당 99는 정상A로 판정되며, 일반 건강관리가 필요합니다.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q017",
+    "question_text": "공복혈당이 98이면 안심해도 돼?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6153042316436768,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4628486633300781,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.3919086456298828,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.3817877769470215,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.3193184733390808,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6153042316436768,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4628486633300781,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.3919086456298828,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": null,
+    "predicted_glu_class": "정상A",
+    "predicted_action": "A0: 일반 건강관리",
+    "answer": "공복혈당이 98이면 정상A로 판정되므로 안심해도 됩니다. 일반적인 건강관리를 유지하는 것이 좋습니다.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q018",
+    "question_text": "공복혈당 100이면 경계야?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.7142086029052734,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.5255529880523682,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.4855721592903137,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.465709924697876,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.3565821051597595,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.7142086029052734,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.5255529880523682,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.4855721592903137,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": null,
+    "predicted_glu_class": "정상B(경계)",
+    "predicted_action": "A1: 생활습관 개선/예방조치",
+    "answer": "제공된 기준에 따르면 공복 혈당 100은 정상B(경계)로 판정되며, 생활습관 개선이 필요해 보여.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q019",
+    "question_text": "공복혈당 101이면 당뇨 전단계로 봐야 해?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6924485564231873,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.5274498462677002,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4596405327320099,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.4060695767402649,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.33843356370925903,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6924485564231873,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.5274498462677002,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4596405327320099,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": null,
+    "predicted_glu_class": "정상B(경계)",
+    "predicted_action": "A1: 생활습관 개선/예방조치",
+    "answer": "공복 혈당 101은 정상B(경계)로 판정되며, 생활습관 개선이 필요해 보여.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q020",
+    "question_text": "공복혈당 124면 괜찮은 편이야?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6048792600631714,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.47115883231163025,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4237714409828186,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.4075673818588257,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.3787829875946045,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6048792600631714,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.47115883231163025,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4237714409828186,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": null,
+    "predicted_glu_class": "정상B(경계)",
+    "predicted_action": "A1: 생활습관 개선/예방조치",
+    "answer": "공복 혈당 124는 정상B(경계)로 판정되며, 생활습관 개선이 필요해 보여.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q021",
+    "question_text": "공복혈당 125면 당뇨야?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6322779059410095,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4390312135219574,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.37706127762794495,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.32873398065567017,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.29167208075523376,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6322779059410095,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4390312135219574,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.37706127762794495,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": null,
+    "predicted_glu_class": "정상B(경계)",
+    "predicted_action": "A1: 생활습관 개선/예방조치",
+    "answer": "공복 혈당 125는 정상B(경계)로 판정되며, 생활습관 개선이 필요해 보여.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q022",
+    "question_text": "공복혈당 126이면 당뇨 의심이야?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6766084432601929,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.5106264352798462,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.3772761821746826,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.33100754022598267,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.2623865008354187,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.6766084432601929,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.5106264352798462,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.3772761821746826,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": null,
+    "predicted_glu_class": "질환의심",
+    "predicted_action": "A2: 의원 방문/진료 및 검사 필요",
+    "answer": "공복 혈당이 126 이상이면 질환의심으로 판정되므로, 의원 방문 및 추가 검사가 필요해 보여.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q023",
+    "question_text": "공복혈당 127이면 병원 가야 해?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.5691032409667969,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4817124605178833,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.39967599511146545,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.34790921211242676,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.28988897800445557,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0008",
+        "rule_id": "healthcheck:0008",
+        "text": "당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100 미만이면 정상A로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 100-125이면 정상B(경계)로 판정한다. 당뇨병 진단을 위한 공복 혈당 검사(mg/dL)에서 결과가 126 이상이면 질환의심로 판정한다.",
+        "score": 0.5691032409667969,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "당뇨병",
+          "test_item": "공복 혈당",
+          "unit": "mg/dL"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4817124605178833,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.39967599511146545,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": null,
+    "predicted_glu_class": "질환의심",
+    "predicted_action": "A2: 의원 방문/진료 및 검사 필요",
+    "answer": "공복 혈당이 126 이상이므로 질환의심으로 판정되어 의원 방문 및 진료가 필요해 보여.",
+    "notes": null
+  }
+]

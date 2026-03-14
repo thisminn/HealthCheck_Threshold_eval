@@ -1,0 +1,872 @@
+[
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q001",
+    "question_text": "혈압이 119/79인데 정상인가?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.6314976215362549,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4479072690010071,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4376929998397827,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.429040789604187,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.38143420219421387,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.6314976215362549,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4479072690010071,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4376929998397827,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": "정상A",
+    "predicted_glu_class": null,
+    "predicted_action": "A0: 일반 건강관리",
+    "answer": "제공된 기준에 따르면 혈압이 119/79일 경우 정상A로 판정되며, 일반 건강관리가 필요합니다.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q002",
+    "question_text": "혈압이 118/78이면 문제 없는 거야?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.6325196027755737,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.46361416578292847,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.3939683437347412,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.38196858763694763,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.3389444053173065,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.6325196027755737,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.46361416578292847,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.3939683437347412,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": "정상A",
+    "predicted_glu_class": null,
+    "predicted_action": "A0: 일반 건강관리",
+    "answer": "제공된 기준에 따르면 혈압이 118/78이면 정상A로 판정되므로 문제는 없어 보입니다.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q003",
+    "question_text": "혈압이 120/80이면 경계로 봐야 해?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.7087776064872742,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4962666630744934,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.470243364572525,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4501851499080658,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.3422674834728241,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.7087776064872742,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.4962666630744934,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.470243364572525,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": "정상B(경계)",
+    "predicted_glu_class": null,
+    "predicted_action": "A1: 생활습관 개선/예방조치",
+    "answer": "제공된 기준에 따르면 혈압이 120/80일 경우 정상B(경계)로 판정되며, 생활습관 개선이 필요해 보여.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q004",
+    "question_text": "혈압이 121/79인데 정상B야?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.6474749445915222,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.508769154548645,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4653904438018799,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.46213072538375854,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.411306232213974,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.6474749445915222,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.508769154548645,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.4653904438018799,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": "정상B(경계)",
+    "predicted_glu_class": null,
+    "predicted_action": "A1: 생활습관 개선/예방조치",
+    "answer": "제공된 기준에 따르면 혈압이 121/79로 정상B(경계)로 판정됩니다. 따라서 생활습관 개선이 필요할 것으로 보입니다.",
+    "notes": null
+  },
+  {
+    "system_name": "plain_rag",
+    "question_id": "Q005",
+    "question_text": "혈압이 139/89면 아직 괜찮은 편이야?",
+    "retrieved_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.5822052955627441,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.39974069595336914,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.3785373270511627,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:1",
+        "rule_id": "healthcheck:0001:1",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준은 정상A, 정상B(경계), 일반 질환의심, 고혈압·당뇨병 이상지질혈증 질환의심, 유질환자의 5단계로 판정된다.",
+        "score": 0.36710360646247864,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "overview",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:2",
+        "rule_id": "healthcheck:0001:2",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상A'는 일반건강검진 및 의료급여생애전환기검진 결과 건강이 양호한 자 상태를 의미한다.",
+        "score": 0.33740898966789246,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "reranked_context": [
+      {
+        "chunk_id": "healthcheck:0004",
+        "rule_id": "healthcheck:0004",
+        "text": "고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120 미만 이며 80 미만이면 정상A로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 120-139 또는 80- 89이면 정상B(경계)로 판정한다. 고혈압 진단을 위한 혈압 - 수축기 - 이완기 검사(mmHg)에서 결과가 140 이상 또는 90 이상이면 질환의심로 판정한다.",
+        "score": 0.5822052955627441,
+        "domain": "checkup",
+        "source_doc": "national_health_checkup",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "item",
+          "rule_type": "numeric_threshold",
+          "target_disease": "고혈압",
+          "test_item": "혈압 - 수축기 - 이완기",
+          "unit": "mmHg"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:5",
+        "rule_id": "healthcheck:0001:5",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '고혈압·당뇨병 이상지질혈증 질환의심'는 일반건강검진 결과 고혈압, 당뇨병, 이상지질혈증이 의심되어 진료와 검사 등이 필요한 자 상태를 의미한다.",
+        "score": 0.39974069595336914,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      },
+      {
+        "chunk_id": "healthcheck:0001:3",
+        "rule_id": "healthcheck:0001:3",
+        "text": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준에서 '정상B(경계)'는 일반건강검진 및 의료급여생애전환기검진 결과 건강에 이상이 없으나 식생활습관, 환경개선 등 자가관리 및 예방조치가 필요한 자 상태를 의미한다.",
+        "score": 0.3785373270511627,
+        "domain": "checkup",
+        "source_doc": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준",
+        "source_page": null,
+        "meta": {
+          "source": "national_health_checkup",
+          "domain": "checkup",
+          "lang": "ko",
+          "version": "v3",
+          "rule_kind": "global",
+          "rule_type": "global_definition",
+          "rule_role": "level_definition",
+          "scope": "overall",
+          "title": "일반건강검진 및 의료급여생애전환기검진 결과 판정기준"
+        }
+      }
+    ],
+    "predicted_bp_class": "정상B(경계)",
+    "predicted_glu_class": null,
+    "predicted_action": "A1: 생활습관 개선/예방조치",
+    "answer": "제공된 기준을 보면 경계 범위로 해석할 수 있어서 생활습관 관리가 필요해 보여.",
+    "notes": null
+  }
+]

@@ -1,0 +1,57 @@
+[
+  {
+    "system_name": "llm_only",
+    "question_id": "Q001",
+    "question_text": "혈압이 119/79인데 정상인가?",
+    "retrieved_context": [],
+    "predicted_bp_class": "정상A",
+    "predicted_glu_class": null,
+    "predicted_action": "A0: 일반 건강관리",
+    "answer": "혈압이 119/79로 정상 범위에 해당합니다. 일반적인 건강 관리를 유지하시면 좋습니다.",
+    "notes": null
+  },
+  {
+    "system_name": "llm_only",
+    "question_id": "Q002",
+    "question_text": "혈압이 118/78이면 문제 없는 거야?",
+    "retrieved_context": [],
+    "predicted_bp_class": "정상A",
+    "predicted_glu_class": null,
+    "predicted_action": "A0: 일반 건강관리",
+    "answer": "혈압이 118/78로 정상 범위에 해당하므로 특별한 문제는 없습니다. 일반적인 건강관리를 유지하시면 좋습니다.",
+    "notes": null
+  },
+  {
+    "system_name": "llm_only",
+    "question_id": "Q003",
+    "question_text": "혈압이 120/80이면 경계로 봐야 해?",
+    "retrieved_context": [],
+    "predicted_bp_class": "정상A",
+    "predicted_glu_class": null,
+    "predicted_action": "A0: 일반 건강관리",
+    "answer": "혈압이 120/80mmHg이면 정상 범위로 볼 수 있어. 특별한 조치가 필요하지 않아.",
+    "notes": null
+  },
+  {
+    "system_name": "llm_only",
+    "question_id": "Q004",
+    "question_text": "혈압이 121/79인데 정상B야?",
+    "retrieved_context": [],
+    "predicted_bp_class": "정상A",
+    "predicted_glu_class": null,
+    "predicted_action": "A0: 일반 건강관리",
+    "answer": "혈압이 121/79로 정상 범위에 해당합니다. 일반적인 건강관리를 유지하시면 됩니다.",
+    "notes": null
+  },
+  {
+    "system_name": "llm_only",
+    "question_id": "Q005",
+    "question_text": "혈압이 139/89면 아직 괜찮은 편이야?",
+    "retrieved_context": [],
+    "predicted_bp_class": "정상B(경계)",
+    "predicted_glu_class": null,
+    "predicted_action": "A1: 생활습관 개선/예방조치",
+    "answer": "혈압 수치가 139/89로 경계 범위에 해당하므로, 생활습관 개선이 필요해 보여.",
+    "notes": null
+  }
+]
